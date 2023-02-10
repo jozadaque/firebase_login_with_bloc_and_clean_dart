@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1034516063788",
+    "project_id": "loginfirebasetest-245c3",
+    "storage_bucket": "loginfirebasetest-245c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034516063788:android:957fcbec7ea20ebb96d389",
+        "android_client_info": {
+          "package_name": "com.example.firebase_login_with_bloc_and_clean_dart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034516063788-uf73vj9vfu5c9gpq6pj02ev026pql9t5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRnNFWBWURloCyWMJiOe6G3yyJBqKi1ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034516063788-tkc3f21nkdibci84luuatu76ssfhk9vi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
