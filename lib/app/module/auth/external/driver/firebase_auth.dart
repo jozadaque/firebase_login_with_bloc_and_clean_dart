@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../domain/entities/credential_auth.dart';
@@ -15,9 +13,8 @@ class FireBaseAuthService {
 
   Future<bool> registerWithEmailAndPassword(CredentialAuth credential) async {
     try {
-      final result = await auth.createUserWithEmailAndPassword(
+      await auth.createUserWithEmailAndPassword(
           email: credential.email, password: credential.password);
-      log(result.user!.uid);
       return true;
     } on FirebaseAuthException catch (e) {
       throw RegisterAuthException(FirebaseErrors.convertMessageError(e.code));

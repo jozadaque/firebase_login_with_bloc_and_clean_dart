@@ -7,7 +7,7 @@ void main() {
     'FirebaseErros Test >',
     () {
       test(
-        'Should return "E-mail já cadastrado" when code error is email-already-exists',
+        'Should return "Email already exists" when code error is email-already-exists',
         () {
           when(
             () => FirebaseErrors.convertMessageError('email-already-exists'),
@@ -16,12 +16,12 @@ void main() {
           final result =
               FirebaseErrors.convertMessageError('email-already-exists');
 
-          expect(result, 'E-mail já Cadastrado');
+          expect(result, 'Email already exists');
         },
       );
 
       test(
-        'Should return "E-mail inválido" when code error is invalid-email',
+        'Should return "Invalid Email" when code error is invalid-email',
         () {
           when(
             () => FirebaseErrors.convertMessageError('invalid-email'),
@@ -29,12 +29,12 @@ void main() {
 
           final result = FirebaseErrors.convertMessageError('invalid-email');
 
-          expect(result, 'E-mail inválido');
+          expect(result, 'Invalid Email');
         },
       );
 
       test(
-        'Should return "Senha Inválida" when code error is invalid-password',
+        'Should return "Invalid password" when code error is invalid-password',
         () {
           when(
             () => FirebaseErrors.convertMessageError('invalid-password'),
@@ -42,12 +42,12 @@ void main() {
 
           final result = FirebaseErrors.convertMessageError('invalid-password');
 
-          expect(result, 'Senha inválida');
+          expect(result, 'Invalid password');
         },
       );
 
       test(
-        'Should return "E-mail já esta em uso" when code error is email-already-in-use',
+        'Should return "Email already in use" when code error is email-already-in-use',
         () {
           when(
             () => FirebaseErrors.convertMessageError('email-already-in-use'),
@@ -56,7 +56,7 @@ void main() {
           final result =
               FirebaseErrors.convertMessageError('email-already-in-use');
 
-          expect(result, 'E-mail já esta em uso');
+          expect(result, 'Email already in use');
         },
       );
     },

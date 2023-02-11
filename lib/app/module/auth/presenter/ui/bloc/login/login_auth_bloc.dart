@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
 
 import '../../../../domain/usecase/i_auth_user_usecase.dart';
@@ -32,10 +30,8 @@ class LoginAuthBloc extends Bloc<LoginAuthEvent, LoginAuthState> {
   }
 
   Future<void> _socialLogin(SocialLoginUserEvent event, emit) async {
-    log('bloc');
     emit(LoadingLoginAuthState());
     final login = await usecase.signInWithSocialLogin();
-    log(login.toString());
 
     login.fold(
       (l) => emit(ExceptionLoginAuthState(l.message.toString())),

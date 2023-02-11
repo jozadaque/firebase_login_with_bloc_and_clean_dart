@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -76,16 +75,13 @@ class _LoginPageState extends State<LoginPage> {
             bloc: blocLogin,
             builder: (context, state) {
               if (state is LoadingLoginAuthState) {
-                log('Loading...');
                 return const Center(child: CircularProgressIndicator());
               }
               if (state is ExceptionLoginAuthState) {
-                log('Exception: ${state.message} ...');
                 message(state.message);
                 blocLogin.add(InitialLoginAuthEvent());
               }
               if (state is SuccessLoginAuthSate) {
-                log('Sucess');
                 goToHomePage('Login successful.');
               }
 

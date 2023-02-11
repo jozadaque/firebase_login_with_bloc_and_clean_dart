@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -15,8 +13,7 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () async {
-                final result = await FirebaseAuth.instance.signOut();
-                //log(result.toString());
+                await FirebaseAuth.instance.signOut();
                 Modular.to.navigate('/');
               },
               icon: const Icon(Icons.power_settings_new_sharp))

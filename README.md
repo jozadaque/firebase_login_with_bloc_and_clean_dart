@@ -38,7 +38,7 @@ The following tools were used in this project:
 
 
   
-  ### 3. Google Login 
+  ### 4. Google Login 
 
 <picture>
   <img alt="Google Login." src="https://github.com/jozadaque/firebase_login_with_bloc_and_clean_dart/blob/master/screens/google_login.png" width="40%">
@@ -46,7 +46,7 @@ The following tools were used in this project:
   
   
   
-  ### 3. Home Page
+  ### 5. Home Page
 
 <picture>
   <img alt="Register Page." src="https://github.com/jozadaque/firebase_login_with_bloc_and_clean_dart/blob/master/screens/home_page.png" width="40%">

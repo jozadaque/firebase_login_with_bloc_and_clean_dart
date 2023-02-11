@@ -2,7 +2,6 @@ import 'package:firebase_login_with_bloc_and_clean_dart/app/module/auth/presente
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-
 import '../../../domain/entities/credential_auth.dart';
 import '../bloc/register/register_auth_bloc.dart';
 import '../bloc/register/register_auth_event.dart';
@@ -134,13 +133,9 @@ class _RegisterPageState extends State<RegisterPage> {
                       const SizedBox(height: 50),
                       ButtonWidget(
                         onPressed: () {
-                          if (!blocRegister.isClosed) {
-                            credential = CredentialAuth(
-                                email: email.text, password: password.text);
-                            blocRegister.add(CreateUserEvent(credential));
-                          } else {
-                            print('Status Bloc: ${blocRegister.isClosed}');
-                          }
+                          credential = CredentialAuth(
+                              email: email.text, password: password.text);
+                          blocRegister.add(CreateUserEvent(credential));
                         },
                         label: 'Register your Count',
                       ),
