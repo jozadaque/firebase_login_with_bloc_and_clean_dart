@@ -1,27 +1,27 @@
 class FirebaseErrors {
   static convertMessageError(String message) {
     if (message == 'email-already-exists') {
-      return 'E-mail já Cadastrado';
+      return 'Email already exists';
     }
 
     if (message == 'invalid-email') {
-      return 'E-mail inválido';
+      return 'Invalid Email';
     }
 
     if (message == 'invalid-password') {
-      return 'Senha inválida';
+      return 'Invalid password';
     }
 
     if (message == 'email-already-in-use') {
-      return 'E-mail já esta em uso';
+      return 'Email already in use';
     }
 
     if (message == 'wrong-password') {
-      return 'Senha Incorreta';
+      return 'Wrong password';
     }
 
     if (message == 'user-not-found') {
-      return 'E-mail não encontrado';
+      return 'User not found';
     }
 
     return message;

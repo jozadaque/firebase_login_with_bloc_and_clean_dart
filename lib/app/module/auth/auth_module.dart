@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import '../private/guard.dart';
 import 'domain/repositories/i_auth_user_repository.dart';
 import 'domain/usecase/auth_user_usecase.dart';
 import 'domain/usecase/i_auth_user_usecase.dart';
@@ -13,7 +14,7 @@ import 'presenter/ui/bloc/reset_password/reset_password_auth_bloc.dart';
 import 'presenter/ui/pages/login_page.dart';
 import 'presenter/ui/pages/register_page.dart';
 import 'presenter/ui/pages/reset_password_page.dart';
-import 'presenter/ui/pages/widgets/home_page.dart';
+import '../private/home_page.dart';
 
 class AuthModule extends Module {
   @override
@@ -38,6 +39,7 @@ class AuthModule extends Module {
         child: (context, args) => const RegisterPage()),
     ChildRoute('/reset-password-page',
         child: (context, args) => const ResetPasswordPage()),
-    ChildRoute('/private/home-page', child: (context, args) => const HomePage())
+    ChildRoute('/private/home-page',
+        child: (context, args) => const HomePage(), guards: [AuthGuard()]),
   ];
 }

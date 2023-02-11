@@ -75,15 +75,15 @@ class _RegisterPageState extends State<RegisterPage> {
             bloc: blocRegister,
             builder: (context, state) {
               if (state is LoadingRegisterAuthState) {
-                return const CircularProgressIndicator();
+                return const Center(child: CircularProgressIndicator());
               }
               if (state is ExceptionRegisterAuthState) {
                 message(state.message);
                 blocRegister.add(InitialRegisterAuthEvent());
               }
               if (state is SuccessRegisterAuthSate) {
-                blocRegister.close();
-                goToLoginPage('Registro realizado com sucesso.');
+                blocRegister.add(InitialRegisterAuthEvent());
+                goToLoginPage('Registration done successfully.');
               }
               return Padding(
                 padding: const EdgeInsets.all(35.0),

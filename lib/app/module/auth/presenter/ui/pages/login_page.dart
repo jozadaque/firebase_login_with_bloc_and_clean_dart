@@ -86,8 +86,7 @@ class _LoginPageState extends State<LoginPage> {
               }
               if (state is SuccessLoginAuthSate) {
                 log('Sucess');
-                blocLogin.close();
-                goToHomePage('Login realizado com sucesso.');
+                goToHomePage('Login successful.');
               }
 
               return Padding(

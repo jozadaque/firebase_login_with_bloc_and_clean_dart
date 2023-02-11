@@ -75,7 +75,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                 resetPasswordAuthBloc.add(InitialResetPasswordAuthEvent());
               }
               if (state is SuccessResetPasswordAuthSate) {
-                resetPasswordAuthBloc.close();
+                resetPasswordAuthBloc.add(InitialResetPasswordAuthEvent());
                 goToLoginPage('A message has been sent to your email box.');
               }
 

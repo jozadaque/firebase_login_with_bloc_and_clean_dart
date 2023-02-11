@@ -8,14 +8,14 @@ class InvalidEmail implements IFailureAuth {
   @override
   final String? message;
 
-  InvalidEmail([this.message = 'E-mail inválido.']);
+  InvalidEmail([this.message = 'Invalid Email.']);
 }
 
 class PasswordLength implements IFailureAuth {
   @override
   final String? message;
 
-  PasswordLength([this.message = 'Senha Invalida.']);
+  PasswordLength([this.message = 'Invalid password.']);
 }
 
 class RepositoryRegisterAuthException implements IFailureAuth {
@@ -24,7 +24,7 @@ class RepositoryRegisterAuthException implements IFailureAuth {
 
   RepositoryRegisterAuthException(
       [this.message =
-          'RepositoryAuthRegisterException: Falha ao solicitar cadastro.']);
+          'RepositoryAuthRegisterException: Failed to request registration.']);
 }
 
 class RepositoryResetPasswordAuthException implements IFailureAuth {
@@ -33,7 +33,7 @@ class RepositoryResetPasswordAuthException implements IFailureAuth {
 
   RepositoryResetPasswordAuthException(
       [this.message =
-          'RepositoryAuthResetPasswordException: Falha ao solicitar reset de senha.']);
+          'RepositoryAuthResetPasswordException: Failed to request password reset.']);
 }
 
 class RepositorySignWithLoginAndPasswordAuthException implements IFailureAuth {
@@ -42,7 +42,7 @@ class RepositorySignWithLoginAndPasswordAuthException implements IFailureAuth {
 
   RepositorySignWithLoginAndPasswordAuthException(
       [this.message =
-          'RepositorySignWithLoginAndPasswordAuthException: Falha ao solicitar login.']);
+          'RepositorySignWithLoginAndPasswordAuthException: Failed to request login.']);
 }
 
 class RepositorySocialLoginException implements IFailureAuth {
@@ -51,7 +51,7 @@ class RepositorySocialLoginException implements IFailureAuth {
 
   RepositorySocialLoginException(
       [this.message =
-          'RepositorySocialLoginException: Falha ao solicitar login.']);
+          'RepositorySocialLoginException: Failed to request login.']);
 }
 
 class RegisterAuthException implements IFailureAuth {
@@ -67,7 +67,7 @@ class DatasourceRegisterAuthException implements IFailureAuth {
 
   DatasourceRegisterAuthException(
       [this.message =
-          'AuthUserDatasourceRegisterException: Falha ao solicitar cadastro.']);
+          'AuthUserDatasourceRegisterException: Failed to request registration.']);
 }
 
 class DatasourceResetPasswordAuthException implements IFailureAuth {
@@ -76,7 +76,7 @@ class DatasourceResetPasswordAuthException implements IFailureAuth {
 
   DatasourceResetPasswordAuthException(
       [this.message =
-          'AuthUserDatasourceResetPasswordException: Falha ao solicitar reset de senha.']);
+          'AuthUserDatasourceResetPasswordException: Failed to request password reset.']);
 }
 
 class DatasourceLoginInWithEmailAndPasswordAuthException
@@ -86,7 +86,7 @@ class DatasourceLoginInWithEmailAndPasswordAuthException
 
   DatasourceLoginInWithEmailAndPasswordAuthException(
       [this.message =
-          'DatasourceLoginInWithEmailAndPasswordAuthException: Falha ao solicitar login.']);
+          'DatasourceLoginInWithEmailAndPasswordAuthException: Failed to request login.']);
 }
 
 class DatasourceSocialLoginAuthException implements IFailureAuth {
@@ -95,5 +95,5 @@ class DatasourceSocialLoginAuthException implements IFailureAuth {
 
   DatasourceSocialLoginAuthException(
       [this.message =
-          'DatasourceSocialLoginAuthException: Falha ao solicitar login.']);
+          'DatasourceSocialLoginAuthException: Failed to request login.']);
 }
